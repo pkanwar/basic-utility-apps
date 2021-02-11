@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sh256 encryption</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles2.css"> 
+    <script type="text/javascript" defer src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script type="text/javascript" defer src="./js/sh256.js" ></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="max-width">
+            <ul class="menu">
+                <li><a href="index.html">URL Encoder Decoder</a></li>
+                <li><a href="base64Encode.html" >base64 Encoder</a></li>
+                <li><a href="base64Decode.html" >base64 Decoder</a></li>
+                <li><a href="md5Encryption.html" >md5 Encryption</a></li>
+                <li><a href="sh1Encryption.html" >sh1 Encryption</a></li>
+                <li><a href="sh256Encryption.html" >sh256 Encryption</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="home" id="home" >
+            <h3 class="title">SHA256 encryption</h3>
+            <textarea id="sh256TextInput"  type="text" value="" placeholder="Please enter a text to encrypt..." ></textarea>
+            
+            <div class="button">
+                <input id="sh256Button" type="button" value="Encode" class="btn btn-success btn-lg" />
+                <input id="clearBtn" type="button" value="CLEAR" class="btn btn-danger btn-lg"  />
+            </div>
+            
+        </section>
+        <section class="outputSection" >
+            <h3 class="title">Result</h3>
+            <div class="outputBox">
+                <textarea id="textSh256Output"  type="text" value="" disabled ></textarea>
+            </div>
+        </section>
+        <section class="sh256Section" >
+            <h3 class="title">What is SHA-256 encryption ?</h3>
+            <div class="sh256SubSection">
+                <p>
+                    In SHA-256, messages up to 2⁶⁴ bit (2.3 exabytes, or 2.3 billion gigabytes) are transformed into digests of size 256 bits (32 bytes).
+                     For perspective, this means that an object 7 times the size of Facebook’s data warehouse in 2014 passed to SHA-256 would produce a 
+                     chunk of data the size of a 32-letter string of ASCII characters, and that string would the object’s very special fingerprint.
+                </p>
+
+                <p>
+                    A prominent use case of hashing is data integrity verification of large files, which relies on the comparison of actual and expected
+                     message digests, or checksums.
+                </p>
+               
+                <h4 class="subTitle" >How secure is SHA-256?</h4>
+                <p>
+                    SHA-256 is one of the most secure hashing functions on the market. The US government requires its agencies 
+                    to protect certain sensitive information using SHA-256. While the exact details of how SHA-256 works are classified,
+                     we know that it is built with a Merkle-Damgård structure derived from a one-way compression function itself created
+                      with the Davies-Meyer structure from a specialized block cipher. 
+                </p>
+                <p>
+                    Three properties make SHA-256 this secure. First, it is almost impossible to reconstruct the initial data from the hash value.
+                     A brute-force attack would need to make 2256 attempts to generate the initial data. Second, having two messages with the same
+                    hash value (called a collision) is extremely unlikely. With 2256 possible hash values (more than the number of atoms in
+                    the known universe), the likelihood of two being the same is infinitesimally, unimaginably small. Finally, a minor 
+                    change to the original data alters the hash value so much that it’s not apparent the new hash value is derived from
+                    similar data; this is known as the avalanche effect.
+                </p>
+               
+            </div>
+        </section>
+    </div>
+       
+
+</body>
+</html>

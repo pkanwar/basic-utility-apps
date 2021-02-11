@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sh1 encryption</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles2.css"> 
+    <script type="text/javascript" defer src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <script type="text/javascript" defer src="./js/sh1.js" ></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="max-width">
+            <ul class="menu">
+                <li><a href="index.html">URL Encoder Decoder</a></li>
+                <li><a href="base64Encode.html" >base64 Encoder</a></li>
+                <li><a href="base64Decode.html" >base64 Decoder</a></li>
+                <li><a href="md5Encryption.html" >md5 Encryption</a></li>
+                <li><a href="sh1Encryption.html" >sh1 Encryption</a></li>
+                <li><a href="sh256Encryption.html" >sh256 Encryption</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="home" id="home" >
+            <h3 class="title">SH1 encryption</h3>
+            <textarea id="sh1TextInput"  type="text" value="" placeholder="Please enter a text to encrypt..." ></textarea>
+            
+            <div class="button">
+                <input id="sh1Button" type="button" value="Encode" class="btn btn-success btn-lg" />
+                <input id="clearBtn" type="button" value="CLEAR" class="btn btn-danger btn-lg"  />
+            </div>
+            
+        </section>
+        <section class="outputSection" >
+            <h3 class="title">Result</h3>
+            <div class="outputBox">
+                <textarea id="textSh1Output"  type="text" value="" disabled ></textarea>
+            </div>
+        </section>
+        <section class="sh1Section" >
+            <h3 class="title">What is SH1 encryption ?</h3>
+            <div class="sh1SubSection">
+                <p>
+                    SHA-1 or Secure Hash Algorithm 1 is a cryptographic hash function which takes an input and produces a 160-bit (20-byte) hash value.
+                     This hash value is known as a message digest. This message digest is usually then rendered as a hexadecimal number which is 40 digits
+                      long. It is a U.S. Federal Information Processing Standard and was designed by the United States National Security Agency.
+                </p>
+               
+                <h4 class="subTitle" >When and why would you use SHA-1 Hash?</h4>
+                <p>
+                    In 2005, SHA-1 was found to no longer be secure enough for ongoing use in high security environments. It was widely used for signing 
+                    of SSL certificates, but is being phased out and will no longer be supported by many browsers by 2017.
+                </p>
+                <p>
+                    SHA-1 is often used as a checksum algorithm. Text or files are fed into the MD5 algorithm and the resulting hash would change
+                     if the file had been changed. This is done to detect malicious tampering, or file corruption.
+                </p>
+                <p>
+                    SHA-1 has also historically been used as a password hashing algorithm. Password hashing algorithms allow a password to be stored,
+                     in a website's database for instance, without having to store the actual password. This makes it more difficult to steal passwords,
+                      and if the hash is taken, the user's password is not necessarily compromised. When using a hashing algorithm for passwords it is
+                       wise to use "salt". With SHA-1, salt is added by concatinating a string unrelated to the password to the user supplied password string.
+                </p>
+            </div>
+        </section>
+    </div>
+       
+
+</body>
+</html>
