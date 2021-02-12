@@ -37,26 +37,11 @@ body {
   margin-right: 25px;
 }
 
-.navbar .menu li {
-  list-style: none;
-  display: inline-block;
-}
-
-.navbar .menu li a {
-  color: #ffffff;
+#menu1 {
+  background-color: #2F4F4F;
   font-size: 18px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  text-decoration: none;
-  padding: 15px;
-}
-
-.navbar .menu li a:hover {
-  color: greenyellow;
-}
-
-.navbar.sticky .menu li a:hover {
-  color: #ffffff;
+  border: 0px;
+  float: right;
 }
 
 .dropdown .dropbtn {
